@@ -1,5 +1,3 @@
-# from view import delete_error
-# from view import print_message
 import json
 
 phone_book = []
@@ -48,12 +46,7 @@ def delete(index: int):
 
 def save_file():
     with open('phones.txt', 'r+', encoding='utf-8') as file:
-        # result = ''
         file.truncate()
-        # for index in phone_book:
-        #     result = phone_book[index] + '\n'
-        # result = '\n'.join(phone_book)
-        # file.write(phone_book)
         for contact in phone_book:
             id = contact['id']
             name = contact['name']
@@ -63,5 +56,5 @@ def save_file():
             line = f"{id}:{name}:{phone}:{comment}"
             file.write(line + '\n')
 
-def phonebok_length():
+def phonebook_length():
     return len(phone_book)
