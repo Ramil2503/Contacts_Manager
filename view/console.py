@@ -1,5 +1,5 @@
 from .text import *
-from model import phonebok_length
+from model import phonebook_length
 
 def menu() -> int:
     print(main_menu)
@@ -45,6 +45,6 @@ def input_return(message: str) -> str:
 def input_id(message: str) -> str:
     while True:
         choice = int(input(message))
-        if choice and 0 < choice < phonebok_length():
+        if choice and 0 < choice <= phonebook_length():
             return choice
         print(delete_error)
