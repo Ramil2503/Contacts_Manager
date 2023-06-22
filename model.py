@@ -56,7 +56,6 @@ class PhoneBook:
 
 
     def delete(self, index: int):
-        # del self.contacts[index]
         for contact in self.contacts:
             if contact.uid == index:
                 self.contacts.remove(contact)
@@ -74,6 +73,3 @@ class PhoneBook:
 
                 line = f"{id}:{name}:{phone}:{comment}"
                 file.write(line + '\n')
-
-    def phonebook_length(self):
-        return len(self.contacts)
