@@ -36,7 +36,7 @@ def start():
                 word = Console.input_return(text.search_word)
                 result = pb.search(word)
                 Console.show_contact(result)
-                index = Console.input_id(text.delete_contact, pb)
+                index = Console.input_delete_id(text.delete_contact, pb)
                 pb.delete(index)
                 Console.show_contacts(pb)
                 Console.print_message(text.contact_deleted)

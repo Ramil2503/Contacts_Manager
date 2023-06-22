@@ -34,7 +34,7 @@ class Console:
 
     def input_contact(message: str) -> dict[str, str]:
         print(message)
-        new = Contact(input(new_contact[0]), input(new_contact[1]), input(new_contact[2]))
+        new = Contact(None, input(new_contact[0]), input(new_contact[1]), input(new_contact[2]))
         return new
 
 
@@ -42,9 +42,9 @@ class Console:
         return input(message)
 
 
-    def input_id(message: str, book: PhoneBook) -> str:
+    def input_delete_id(message: str, book: PhoneBook) -> str:
         while True:
-            choice = int(input(message))
+            choice = input(message)
             for contact in book.contacts:
                 if contact.uid == choice:
                     book.contacts.remove(contact)
